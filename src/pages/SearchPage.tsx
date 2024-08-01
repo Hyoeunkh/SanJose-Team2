@@ -19,18 +19,17 @@ const SearchWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   padding: 20px 0px;
 `;
-const SearchNature = styled.p`
-  font-size: 32px;
+const SearchNature = styled.div`
+  margin: 0 auto;
+  font-size: 20px;
   font-weight: 400;
   span {
     font-weight: bold;
   }
-  text-align: start;
 `;
 const Space = styled.div`
-  height: 40px;
+  height: 30px;
   max-width: 1440px;
 `;

@@ -38,7 +38,7 @@ const Main = styled.main`
 `;
 
 const Sidebar = styled.aside`
-  display: none;
+  display: block;
   position: sticky;
   top: 130px;
   width: 100%;

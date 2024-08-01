@@ -54,34 +54,38 @@ export const ItemSection = () => {
     <ItemSectionWrapper>
       <Container flexDirection="column" justifyContent="center" alignItems="center" maxWidth="1100px">
         <Filter filter={filter} changeFilter={changeFilter} />
-        <CategorySelect>
-          <Inner>
-            {Object.keys(categories).map((category) => (
-              <CategoryGroup key={category}>
-                <CategoryLabel onClick={() => toggleDropdown(category as keyof ICategory)}>
-                  {category} <IoIosArrowDown />
-                </CategoryLabel>
-                {dropdownOpen === category && (
-                  <DropdownContent>
-                    {categories[category as keyof ICategory].map((option) => (
-                      <CategoryOption key={option}>
-                        <StyledInput
-                          type={'checkbox'}
-                          id={`${category}-${option}`}
-                          name={category}
-                          value={option}
-                          checked={selectedCategory[category as keyof ICategory].includes(option)}
-                          onChange={(e) => handleCategoryChange(category as keyof ICategory, e.target.value)}
-                        />
-                        <label htmlFor={`${category}-${option}`}>{option}</label>
-                      </CategoryOption>
-                    ))}
-                  </DropdownContent>
-                )}
-              </CategoryGroup>
-            ))}
-          </Inner>
-        </CategorySelect>
+        {filter === 'FUNDING' ? (
+          <Space />
+        ) : (
+          <CategorySelect>
+            <Inner>
+              {Object.keys(categories).map((category) => (
+                <CategoryGroup key={category}>
+                  <CategoryLabel onClick={() => toggleDropdown(category as keyof ICategory)}>
+                    {category} <IoIosArrowDown />
+                  </CategoryLabel>
+                  {dropdownOpen === category && (
+                    <DropdownContent>
+                      {categories[category as keyof ICategory].map((option) => (
+                        <CategoryOption key={option}>
+                          <StyledInput
+                            type={'checkbox'}
+                            id={`${category}-${option}`}
+                            name={category}
+                            value={option}
+                            checked={selectedCategory[category as keyof ICategory].includes(option)}
+                            onChange={(e) => handleCategoryChange(category as keyof ICategory, e.target.value)}
+                          />
+                          <label htmlFor={`${category}-${option}`}>{option}</label>
+                        </CategoryOption>
+                      ))}
+                    </DropdownContent>
+                  )}
+                </CategoryGroup>
+              ))}
+            </Inner>
+          </CategorySelect>
+        )}
         <FilteredList filter={filter} />
       </Container>
     </ItemSectionWrapper>
@@ -103,14 +107,13 @@ const ItemSectionWrapper = styled.div`
 const CategorySelect = styled.div`
   width: 1100px;
   margin: 0 auto;
-  background-color: #fdf0d2;
   display: flex;
   justify-content: center;
 `;
 const Inner = styled.div`
   width: 800px;
   display: flex;
-  padding-top: 60px;
+  padding-top: 40px;
   gap: 20px;
   justify-content: center;
   align-items: center;
@@ -171,6 +174,11 @@ const CategoryOption = styled.div`
 const StyledInput = styled.input`
   width: 20px;
   height: 20px;
+`;
+const Space = styled.div`
+  max-width: 1100px;
+  height: 50px;
+  background-color: #ededed;
 `;
 
 export default ItemSection;

@@ -37,19 +37,18 @@ const List = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
 `;
 const Text = styled.p<Pick<IText, 'targetValue' | 'text'>>`
-  width: calc(1440 / 3);
+  width: calc(1440 / 6);
   font-size: 20px;
   font-weight: ${(props) => (props.targetValue === props.text ? 'bold' : '400')};
-  padding: 16px 0px;
-  background-color: ${(props) => (props.targetValue === props.text ? '#FDF0D2' : 'white')};
+  padding: 10px 0px;
+  border-bottom: 4px solid ${(props) => (props.targetValue === props.text ? '#FFBA00' : 'white')};
   border-radius: 10px 10px 0px 0px;
   text-align: center;
   transition:
     background-color 0.1s,
     font-weight 0.1s;
-  width: 100%;
   cursor: pointer;
 `;

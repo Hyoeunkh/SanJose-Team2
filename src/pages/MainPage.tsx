@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 import { AboutUs } from '@/components/AboutUs';
-import { CarouselContainer } from '@/components/Carousel';
+import { Carousel } from '@/components/Carousel';
 import { Contact } from '@/components/Contact';
 import { OurService } from '@/components/OurService';
 import { SuccessStory } from '@/components/SuccessStory';
@@ -10,7 +10,7 @@ export default function MainPage() {
   return (
     <MainWrapper>
       <Space />
-      <CarouselContainer />
+      <Carousel />
       <Space />
       <AboutUs />
       <OurService />

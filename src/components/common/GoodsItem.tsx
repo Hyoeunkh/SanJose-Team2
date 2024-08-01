@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
-import { Image } from 'react-bootstrap';
+import { Image, ProgressBar } from 'react-bootstrap';
 import { FaUserCircle } from 'react-icons/fa';
 
 import type { Goods } from '@/constant/GoodsItems';
 
-export const GoodsItem = ({ imageSrc, name, title, star, amount }: Goods) => {
+export const GoodsItem = ({ imageSrc, name, title, star, amount, type }: Goods) => {
   return (
     <GoodsItemWrapper>
       <Image src={imageSrc} width="100%" alt="goodsItem" />
@@ -23,6 +23,12 @@ export const GoodsItem = ({ imageSrc, name, title, star, amount }: Goods) => {
           <span>From $</span>
           {amount}
         </GoodsItemAmout>
+        {type === 'FUNDING' && (
+          <Section>
+            <p>Fund Now !</p>
+            <ProgressBar now={58} variant="warning" />
+          </Section>
+        )}
       </GoodsDescription>
     </GoodsItemWrapper>
   );
@@ -30,12 +36,13 @@ export const GoodsItem = ({ imageSrc, name, title, star, amount }: Goods) => {
 
 const GoodsItemWrapper = styled.div`
   max-width: 450px;
-  position: relative;
   text-align: center;
   color: #2d2d2d;
+  padding-bottom: 20px;
+  box-shadow: 0 0 8px 1px #e0e0e0d0;
   cursor: pointer;
   :hover {
-    box-shadow: 0 0 0 2px #ffbb00d0;
+    transform: scale(1.01);
     text-decoration: none;
   }
 `;
@@ -45,7 +52,6 @@ const GoodsDescription = styled.div`
   word-break: break-word;
   display: flex;
   flex-direction: column;
-  gap: 10px;
   background-color: white;
 `;
 const User = styled.div`
@@ -57,6 +63,7 @@ const User = styled.div`
 const GoodsItemName = styled.div`
   color: #2c2c2c;
   font-size: 18px;
+  font-weight: 500;
   white-space: nowrap;
   margin: 0;
   display: flex;
@@ -76,7 +83,7 @@ const GoodsItemStar = styled.p`
   }
 `;
 const GoodsItemTitle = styled.h5`
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 500;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -92,4 +99,14 @@ const GoodsItemAmout = styled.p`
   font-weight: 400;
   padding: 0px 20px 10px;
   text-align: end;
+`;
+const Section = styled.div`
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin: 20px auto;
+  p {
+    padding-bottom: 20px;
+  }
 `;

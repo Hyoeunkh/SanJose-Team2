@@ -17,15 +17,7 @@ export const FilteredList = ({ filter }: Pick<IChangeFilter, 'filter'>) => {
 
   return (
     <ListWrapper>
-      <Container
-        flexDirection="column"
-        justifyContent="center"
-        alignItems="center"
-        maxWidth="1100px"
-        css={css`
-          background-color: #fdf0d2;
-        `}
-      >
+      <Container flexDirection="column" justifyContent="center" alignItems="center" maxWidth="1100px">
         <Grid
           columns={{ init: 2, md: 2 }}
           gap={40}
@@ -34,7 +26,7 @@ export const FilteredList = ({ filter }: Pick<IChangeFilter, 'filter'>) => {
           `}
         >
           {filteredItems.map((item) => (
-            <Link to="/detail" state={{ item: item }}>
+            <Link to="/detail" state={{ item: item }} key={item.key}>
               <GoodsItem
                 key={item.key}
                 imageSrc={item.imageSrc}

@@ -1,19 +1,22 @@
 import styled from '@emotion/styled';
 import { useLocation } from 'react-router-dom';
 
-import { GoodsDetailItem } from '@/components/GoodsDetailItem';
-import { GoodsInfo } from '@/components/GoodsInfo';
-import { OptionAndOrder } from '@/components/OptionAndOrder';
+import { GoodsDetailItem } from '@/components/Detail/GoodsDetailItem';
+import { OptionAndOrder } from '@/components/Detail/OptionAndOrder';
 import { SplitLayout } from '@/components/SplitLayput';
+import { goodsDetailItems } from '@/constant/GoodsItems';
 
 export default function DetailPage() {
   const location = useLocation();
-  const item = location?.state?.item;
+  const type = location?.state?.item;
+
+  const items = goodsDetailItems;
+  const item = type.type === 'CAFE' ? items[0] : items[1];
   return (
     <SplitLayout sidebar={<OptionAndOrder />}>
       <Wrapper>
         <GoodsDetailItem
-          key={item?.id}
+          key={item.key}
           imageSrc={item?.imageSrc}
           name={item?.name}
           title={item?.title}
@@ -27,7 +30,6 @@ export default function DetailPage() {
           type={item?.type}
         />
         <Space />
-        <GoodsInfo />
       </Wrapper>
     </SplitLayout>
   );
@@ -38,7 +40,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px 0px;
+  padding: 100px 0px;
 `;
 
 const Space = styled.div`

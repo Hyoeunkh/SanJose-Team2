@@ -19,11 +19,11 @@ export const GoodsDetailItem = ({
 }: GoodsDetail) => {
   return (
     <GoodsItemWrapper>
-      <Image src={imageSrc} width="60%" alt="goodsItem" />
+      <Image src={imageSrc} width="96%" alt="goodsItem" />
       <GoodsDescription>
         <User>
           <GoodsItemName>
-            <FaUserCircle size={22} color={'FFBA00'} />
+            <FaUserCircle size={28} color={'FFBA00'} />
             {name}
           </GoodsItemName>
           <GoodsItemStar>
@@ -31,6 +31,7 @@ export const GoodsDetailItem = ({
           </GoodsItemStar>
         </User>
         <GoodsItemTitle>{title}</GoodsItemTitle>
+        <Space />
         <Title>Design concept</Title>
         <Description>{concept}</Description>
         <Title>Required capital</Title>
@@ -38,20 +39,56 @@ export const GoodsDetailItem = ({
         <Title>Preferred location</Title>
         <Description>{location}</Description>
         <Title>Operation Hour</Title>
-        <Description>{hour}</Description>
+        <Description>
+          {hour.map((item) => {
+            return (
+              <p>
+                {item}
+                <br />
+              </p>
+            );
+          })}
+        </Description>
         <Title>Marketing strategy</Title>
-        <Description>{marketing}</Description>
+        <Description>
+          {marketing.map((item) => {
+            return (
+              <p>
+                {item}
+                <br />
+              </p>
+            );
+          })}
+        </Description>
         <Title>Target Age</Title>
-        <Description>{age}</Description>
+        <Description>
+          {age.map((item) => {
+            return (
+              <p>
+                {item}
+                <br />
+              </p>
+            );
+          })}
+        </Description>
         <Title>Service type</Title>
-        <Description>{type}</Description>
+        <Description>
+          {type.map((item) => {
+            return (
+              <p>
+                {item}
+                <br />
+              </p>
+            );
+          })}
+        </Description>
       </GoodsDescription>
     </GoodsItemWrapper>
   );
 };
 
 const GoodsItemWrapper = styled.div`
-  max-width: 1100px;
+  max-width: 900px;
   position: relative;
   text-align: center;
   color: #2d2d2d;
@@ -73,17 +110,22 @@ const User = styled.div`
 `;
 const GoodsItemName = styled.div`
   color: #2c2c2c;
-  font-size: 18px;
+  font-size: 20px;
   white-space: nowrap;
   margin: 0;
   display: flex;
   svg {
-    margin-right: 4px;
+    margin-right: 8px;
     margin-top: 2px;
   }
 `;
+const Space = styled.hr`
+  width: 95%;
+  background-color: #dedede;
+  margin: 6px 0px 20px 23px;
+`;
 const GoodsItemStar = styled.p`
-  font-size: 16px;
+  font-size: 18px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -105,20 +147,21 @@ const GoodsItemTitle = styled.h5`
   text-align: start;
 `;
 const Description = styled.p`
-  font-size: 16px;
-  font-weight: 400;
-  padding: 0px 20px 10px;
-  text-align: end;
+  font-size: 18px;
+  color: #000000;
+  padding: 0px 20px 36px;
+  text-align: start;
 `;
 const Title = styled.h5`
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 700;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   padding-left: 20px;
+  padding-bottom: 4px;
   margin: 0;
   text-align: start;
 `;
