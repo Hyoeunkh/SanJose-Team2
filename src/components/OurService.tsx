@@ -33,7 +33,7 @@ export const OurService = () => {
   return (
     <Services>
       <h2>SERVICES</h2>
-      <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      <p>Why Choose DreamStore Hub?</p>
       <ServiceCards>
         {services.map((service, index) => (
           <ServiceCard key={index} icon={service.icon} title={service.title} description={service.description} />

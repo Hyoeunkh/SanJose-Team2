@@ -112,7 +112,7 @@ const Input = styled.input`
   background-origin: border-box;
   background-clip: padding-box, border-box;
   border-radius: 4px;
-  margin-right: 4px;
+  margin-right: 10px;
   width: 80%;
   height: 50px;
   font-size: 1.1em;
@@ -129,4 +129,5 @@ const Icons = styled.div`
   display: flex;
   align-items: center;
   gap: 40px;
+  cursor: pointer;
 `;

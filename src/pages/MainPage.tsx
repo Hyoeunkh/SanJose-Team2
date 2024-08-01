@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 
 import { AboutUs } from '@/components/AboutUs';
-import { Carousel } from '@/components/Carousel';
 import { Contact } from '@/components/Contact';
+import { MainText } from '@/components/MainText';
 import { OurService } from '@/components/OurService';
 import { SuccessStory } from '@/components/SuccessStory';
 
@@ -10,7 +10,8 @@ export default function MainPage() {
   return (
     <MainWrapper>
       <Space />
-      <Carousel />
+      {/* <Carousel /> */}
+      <MainText />
       <Space />
       <AboutUs />
       <OurService />

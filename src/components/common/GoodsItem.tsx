@@ -26,7 +26,7 @@ export const GoodsItem = ({ imageSrc, name, title, star, amount, type }: Goods) 
         {type === 'FUNDING' && (
           <Section>
             <p>Fund Now !</p>
-            <ProgressBar now={58} variant="warning" />
+            <ProgressBar now={58} variant="warning" /> 58%
           </Section>
         )}
       </GoodsDescription>
