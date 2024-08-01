@@ -2,7 +2,7 @@
   "name": "dreamstore-hub",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Hyoeunkh.github.io/sanjose-team2",
+  "homepage": "https://Hyoeunkh.github.io/SanJose-Team2",
   "dependencies": {
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.3",
