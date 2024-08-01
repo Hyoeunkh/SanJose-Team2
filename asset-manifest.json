@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/sanjose-team2/static/css/main.36ceb2e2.css",
+    "main.js": "/sanjose-team2/static/js/main.7ff13a8f.js",
+    "static/media/cafe1.png": "/sanjose-team2/static/media/cafe1.65cec3e9490c79ec63a2.png",
+    "static/media/carousel.png": "/sanjose-team2/static/media/carousel.fd8950255d8b27d54b0f.png",
+    "static/media/rest2.png": "/sanjose-team2/static/media/rest2.ba640831302674fca411.png",
+    "static/media/rest1.png": "/sanjose-team2/static/media/rest1.b46aaebd23eada1f7c98.png",
+    "static/media/Logo.png": "/sanjose-team2/static/media/Logo.4b64f23df7fa144b8964.png",
+    "static/media/SharaImg.avif": "/sanjose-team2/static/media/SharaImg.14ca75a664feb6681b0a.avif",
+    "static/media/JohnImg.webp": "/sanjose-team2/static/media/JohnImg.5fe119085fba0875920c.webp",
+    "index.html": "/sanjose-team2/index.html",
+    "main.36ceb2e2.css.map": "/sanjose-team2/static/css/main.36ceb2e2.css.map",
+    "main.7ff13a8f.js.map": "/sanjose-team2/static/js/main.7ff13a8f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.36ceb2e2.css",
+    "static/js/main.7ff13a8f.js"
+  ]
+}
