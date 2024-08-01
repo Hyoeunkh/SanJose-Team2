@@ -1,20 +1,43 @@
 {
   "files": {
-    "main.css": "/sanjose-team2/static/css/main.36ceb2e2.css",
-    "main.js": "/sanjose-team2/static/js/main.7ff13a8f.js",
+    "main.css": "/sanjose-team2/static/css/main.6da6c75e.css",
+    "main.js": "/sanjose-team2/static/js/main.0c65e5f3.js",
+    "static/media/detailcafe.png": "/sanjose-team2/static/media/detailcafe.33f3130344337270eec5.png",
+    "static/media/cafe2.png": "/sanjose-team2/static/media/cafe2.790ca54830fbc945e91a.png",
+    "static/media/detailrest.png": "/sanjose-team2/static/media/detailrest.1ab6e032da486bb525cd.png",
+    "static/media/rest3.png": "/sanjose-team2/static/media/rest3.29f7a0442aad4de40db8.png",
     "static/media/cafe1.png": "/sanjose-team2/static/media/cafe1.65cec3e9490c79ec63a2.png",
-    "static/media/carousel.png": "/sanjose-team2/static/media/carousel.fd8950255d8b27d54b0f.png",
+    "static/media/rest4.png": "/sanjose-team2/static/media/rest4.8ee07f099a033b09e53f.png",
+    "static/media/carousel1.png": "/sanjose-team2/static/media/carousel1.fd8950255d8b27d54b0f.png",
+    "static/media/rest5.png": "/sanjose-team2/static/media/rest5.bf4b3a23120e804410db.png",
     "static/media/rest2.png": "/sanjose-team2/static/media/rest2.ba640831302674fca411.png",
+    "static/media/cafe5.png": "/sanjose-team2/static/media/cafe5.8d446381b08f26a5d030.png",
     "static/media/rest1.png": "/sanjose-team2/static/media/rest1.b46aaebd23eada1f7c98.png",
+    "static/media/cafe3.png": "/sanjose-team2/static/media/cafe3.dd0baece716f39a8ed5f.png",
+    "static/media/carousel2.png": "/sanjose-team2/static/media/carousel2.92547998150c0c5453f1.png",
+    "static/media/cafe4.png": "/sanjose-team2/static/media/cafe4.2ff4a3ae58afa4190b94.png",
+    "static/media/cafe6.png": "/sanjose-team2/static/media/cafe6.20885d76723206d892f6.png",
+    "static/media/rest6.png": "/sanjose-team2/static/media/rest6.39d59a67e7eea0ccb18a.png",
+    "static/media/carousel3.png": "/sanjose-team2/static/media/carousel3.caab8ef06b7d210ef2cb.png",
+    "static/media/interior3.png": "/sanjose-team2/static/media/interior3.b85c42c07fec1fa57615.png",
+    "static/media/interior2.png": "/sanjose-team2/static/media/interior2.50cb8796b0fdc02c26c4.png",
+    "static/media/consult2.png": "/sanjose-team2/static/media/consult2.04e17e098377b7d0f2d7.png",
+    "static/media/interior1.png": "/sanjose-team2/static/media/interior1.2298870336bf152cf590.png",
+    "static/media/consult1.png": "/sanjose-team2/static/media/consult1.2bb762f010e2265a1ecf.png",
+    "static/media/consult3.png": "/sanjose-team2/static/media/consult3.7eea193fd1586d6e4767.png",
     "static/media/Logo.png": "/sanjose-team2/static/media/Logo.4b64f23df7fa144b8964.png",
     "static/media/SharaImg.avif": "/sanjose-team2/static/media/SharaImg.14ca75a664feb6681b0a.avif",
     "static/media/JohnImg.webp": "/sanjose-team2/static/media/JohnImg.5fe119085fba0875920c.webp",
+    "static/media/slick.svg": "/sanjose-team2/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/sanjose-team2/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/sanjose-team2/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/sanjose-team2/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/sanjose-team2/index.html",
-    "main.36ceb2e2.css.map": "/sanjose-team2/static/css/main.36ceb2e2.css.map",
-    "main.7ff13a8f.js.map": "/sanjose-team2/static/js/main.7ff13a8f.js.map"
+    "main.6da6c75e.css.map": "/sanjose-team2/static/css/main.6da6c75e.css.map",
+    "main.0c65e5f3.js.map": "/sanjose-team2/static/js/main.0c65e5f3.js.map"
   },
   "entrypoints": [
-    "static/css/main.36ceb2e2.css",
-    "static/js/main.7ff13a8f.js"
+    "static/css/main.6da6c75e.css",
+    "static/js/main.0c65e5f3.js"
   ]
 }
