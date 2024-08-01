@@ -49,7 +49,7 @@ export const Header = ({ searchQuery }: HeaderProps) => {
         <SearchBar onSubmit={handleSearch}>
           <Input
             value={query}
-            placeholder="search anything"
+            placeholder="search anything !!"
             aria-label="Search"
             onChange={(e) => setQuery(e.target.value)}
           />
