@@ -5,7 +5,7 @@ import { ProgressBar } from 'react-bootstrap';
 import { CircularProgressbar } from 'react-circular-progressbar';
 
 export const AIexpect = () => {
-  const percentage = 51.26;
+  const percentage = 87.21;
 
   return (
     <GoodsItemWrapper>
@@ -19,7 +19,7 @@ export const AIexpect = () => {
             stroke: `rgb(255, 186, 0)`,
             strokeLinecap: 'butt',
             transition: 'stroke-dashoffset 0.5s ease 0s',
-            transform: 'rotate(0.49turn)',
+            transform: 'rotate(0.12turn)',
             transformOrigin: 'center center',
           },
           trail: {
@@ -40,19 +40,16 @@ export const AIexpect = () => {
       />
       <GoodsDescription>
         <Section>
-          <ProgressBar now={60} variant="warning" />
-          <p>
-            The area has 17 other businesses with the same 'modern' design concept, which positively influences the
-            success rate.
-          </p>
+          <ProgressBar now={67} variant="warning" />
+          <h4>'modern' design concept</h4>
         </Section>
         <Section>
           <ProgressBar now={56} variant="warning" />
-          <p>The startup budget of 50000.0 negatively influences the success rate.</p>
+          <h4>budget of 50000.0</h4>
         </Section>
         <Section>
           <ProgressBar now={30} variant="warning" />
-          <p>The average review rating of 3.19 positively influences the success rate.</p>
+          <h4>average review rating of 3.19</h4>
         </Section>
       </GoodsDescription>
     </GoodsItemWrapper>
@@ -60,7 +57,7 @@ export const AIexpect = () => {
 };
 
 const GoodsItemWrapper = styled.div`
-  max-width: 420px;
+  max-width: 520px;
   text-align: center;
   color: #2d2d2d;
   border: 1px solid transparent;
@@ -86,4 +83,8 @@ const Section = styled.div`
   width: 80%;
   display: flex;
   flex-direction: column;
+  h4 {
+    font-size: 18px;
+    padding: 2px;
+  }
 `;

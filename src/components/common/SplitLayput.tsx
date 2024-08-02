@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { Container } from './common/Container';
+import { Container } from './Container';
 
 type Props = {
   children: React.ReactNode;
@@ -34,7 +34,7 @@ const Inner = styled.div`
 
 const Main = styled.main`
   width: 100%;
-  max-width: 900px;
+  max-width: 800px;
 `;
 
 const Sidebar = styled.aside`
@@ -43,5 +43,5 @@ const Sidebar = styled.aside`
   top: 130px;
   width: 100%;
   max-width: 360px;
-  height: calc(100vh - 130px);
+  margin: 60px 0;
 `;

@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 import { useLocation } from 'react-router-dom';
 
+import { SplitLayout } from '@/components/common/SplitLayput';
 import { GoodsDetailItem } from '@/components/Detail/GoodsDetailItem';
 import { OptionAndOrder } from '@/components/Detail/OptionAndOrder';
-import { SplitLayout } from '@/components/SplitLayput';
 import { goodsDetailItems } from '@/constant/GoodsItems';
 
 export default function DetailPage() {

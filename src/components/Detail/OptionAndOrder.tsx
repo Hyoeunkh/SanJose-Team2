@@ -3,12 +3,14 @@ import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 import { AIexpect } from './AIexpect';
+import { Recommends } from './Recommend';
 
 export const OptionAndOrder = () => {
   const navigate = useNavigate();
   return (
     <OptionWrapper>
       <AIexpect />
+      <Recommends />
       <Button variant="warning" size="lg" onClick={() => navigate('/option')}>
         Purchase
       </Button>
@@ -21,7 +23,7 @@ const OptionWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 700px;
+  width: 800px;
 
   margin-top: 20px;
 

@@ -19,7 +19,7 @@ export const GoodsDetailItem = ({
 }: GoodsDetail) => {
   return (
     <GoodsItemWrapper>
-      <Image src={imageSrc} width="96%" alt="goodsItem" />
+      <Image src={imageSrc} width="100%" alt="goodsItem" />
       <GoodsDescription>
         <User>
           <GoodsItemName>
