@@ -1,8 +1,12 @@
 import styled from '@emotion/styled';
+import { useEffect } from 'react';
 
 import { ItemSection } from '@/components/ItemSection';
 
 export default function SearchPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <SearchWrapper>
       <Space />

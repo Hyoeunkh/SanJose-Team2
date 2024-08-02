@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 
+// import { Carousel } from 'react-bootstrap';
 import { AboutUs } from '@/components/AboutUs';
 import { Contact } from '@/components/Contact';
 import { MainText } from '@/components/MainText';

@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
@@ -7,11 +8,18 @@ import { Recommends } from './Recommend';
 
 export const OptionAndOrder = () => {
   const navigate = useNavigate();
+  const handlePurchase = () => {
+    navigate('/option', { replace: true });
+  };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <OptionWrapper>
       <AIexpect />
       <Recommends />
-      <Button variant="warning" size="lg" onClick={() => navigate('/option')}>
+      <Button variant="warning" size="lg" onClick={handlePurchase}>
         Purchase
       </Button>
     </OptionWrapper>

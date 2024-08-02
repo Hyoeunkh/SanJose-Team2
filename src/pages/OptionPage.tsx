@@ -1,10 +1,14 @@
 import { FormControl, FormLabel, Switch } from '@chakra-ui/react';
 import styled from '@emotion/styled';
+import { useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 
 import { OptionSection } from '@/components/Option/OptionSection';
 
 export default function OptionPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Wrapper>
       <SwitchSection>

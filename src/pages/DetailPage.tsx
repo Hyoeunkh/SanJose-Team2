@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import { SplitLayout } from '@/components/common/SplitLayput';
@@ -12,6 +13,9 @@ export default function DetailPage() {
 
   const items = goodsDetailItems;
   const item = type.type === 'CAFE' ? items[0] : items[1];
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <SplitLayout sidebar={<OptionAndOrder />}>
       <Wrapper>
