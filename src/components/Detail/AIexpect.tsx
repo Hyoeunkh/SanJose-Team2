@@ -5,7 +5,7 @@ import { ProgressBar } from 'react-bootstrap';
 import { CircularProgressbar } from 'react-circular-progressbar';
 
 export const AIexpect = () => {
-  const percentage = 87.21;
+  const percentage = 56.21;
 
   return (
     <GoodsItemWrapper>
@@ -19,7 +19,7 @@ export const AIexpect = () => {
             stroke: `rgb(255, 186, 0)`,
             strokeLinecap: 'butt',
             transition: 'stroke-dashoffset 0.5s ease 0s',
-            transform: 'rotate(0.12turn)',
+            transform: 'rotate(0.44turn)',
             transformOrigin: 'center center',
           },
           trail: {
@@ -40,11 +40,11 @@ export const AIexpect = () => {
       />
       <GoodsDescription>
         <Section>
-          <ProgressBar now={67} variant="warning" />
+          <ProgressBar now={57} variant="warning" />
           <h4>'modern' design concept</h4>
         </Section>
         <Section>
-          <ProgressBar now={56} variant="warning" />
+          <ProgressBar now={46} variant="warning" />
           <h4>budget of 50000.0</h4>
         </Section>
         <Section>

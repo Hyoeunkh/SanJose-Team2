@@ -5,6 +5,7 @@ from xgboost import XGBRegressor
 from sklearn.metrics import mean_squared_error
 import numpy as np
 import shap
+from scipy.spatial import distance
 
 x1 = input("interior_design_concept : ")
 x2 = int(input("location_zip_code : "))
@@ -14,7 +15,6 @@ data = pd.read_csv('updated_combined_dreamHub.csv')
 
 print(data.dtypes)
 
-# 'business_profit_rate' 열을 문자열로 변환한 후 퍼센트 기호 제거
 data['business_profit_rate'] = data['business_profit_rate'].astype(str).str.rstrip('%').astype(float) / 100
 
 label_encoder = LabelEncoder()
@@ -25,7 +25,6 @@ average_ratings.rename(columns={'average_review_ratings': 'avg_review_rating'}, 
 
 data = pd.merge(data, average_ratings, on=['location_zip_code', 'interior_design_concept'], how='left')
 
-# 독립 변수와 종속 변수 분리
 X = data[['interior_design_concept', 'location_zip_code', 'startup_budget', 'avg_review_rating']]
 y = data['business_profit_rate']
 
@@ -69,13 +68,12 @@ new_data['interior_design_concept'] = label_encoder.transform(new_data['interior
 avg_rating = average_ratings[(average_ratings['location_zip_code'] == new_data['location_zip_code'][0]) & 
                              (average_ratings['interior_design_concept'] == new_data['interior_design_concept'][0])]['avg_review_rating']
 if avg_rating.empty:
-    new_data['avg_review_rating'] = data['average_review_ratings'].mean() 
+    new_data['avg_review_rating'] = data['average_review_ratings'].mean()
 else:
     new_data['avg_review_rating'] = avg_rating.values[0]
 
 new_data_scaled = scaler.transform(new_data)
 
-# 성공 확률 예측
 success_rate = best_model.predict(new_data_scaled)
 print("Predicted Success Rate:", success_rate)
 
@@ -87,6 +85,7 @@ shap_values = explainer(X_scaled)
 
 new_shap_values = explainer(new_data_scaled)
 
+# SHAP 값을 기반으로 예측 결과 설명
 def explain_shap_values(new_data, new_shap_values, feature_names, average_ratings, data):
     explanations = []
     for feature_name, shap_value in zip(feature_names, new_shap_values[0].values):
@@ -115,3 +114,15 @@ def explain_shap_values(new_data, new_shap_values, feature_names, average_rating
 explanations = explain_shap_values(new_data, new_shap_values, new_data.columns, average_ratings, data)
 for explanation in explanations:
     print(explanation)
+
+def recommend_similar_cases(new_data_scaled, X_scaled, data, top_n=3):
+    distances = distance.cdist(new_data_scaled, X_scaled, 'euclidean')[0]
+    similar_cases_indices = np.argsort(distances)
+    similar_cases = data.iloc[similar_cases_indices]
+    top_successful_cases = similar_cases.nlargest(top_n, 'business_profit_rate')
+    return top_successful_cases
+
+recommended_cases = recommend_similar_cases(new_data_scaled, X_scaled, data)
+print("Recommended Cases with High Success Rate:")
+print(recommended_cases)
+
